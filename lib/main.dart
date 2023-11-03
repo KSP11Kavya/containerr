@@ -6,20 +6,68 @@ void main() => runApp(MyApp());
 // Any widget may be used as the child class.
 // Consider a text widget as an example.
 
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: 'Container App',
+//         ),
+//         body: Container(
+//           child: Text(
+//             "i am inside container",
+//             style: TextStyle(fontSize: 23),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text(
+//             'Color property',
+//           ),
+//         ),
+//         body: Container(
+//           height: 220,
+//             width: double.infinity,
+//           color: Colors.red.shade100,
+//           margin: EdgeInsets.all(25),
+//           child: Text(
+//             " i am inside a container!",
+//             style: TextStyle(fontSize: 25),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: 'Container App',
+          title: Text("designer container eaxmple"),
         ),
-        body: Container(
-          child: Text(
-            "i am inside container",
-            style: TextStyle(fontSize: 23),
-          ),
-        ),
+        body: Container(height: 200,
+            width: double.infinity,
+        //color:Colors.purple
+    alignment: Alignment.center
+          margin: EdgeInsets.all(20),
+      padding: EdgeInsets.all(30),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.cyan.shade900,width: 3),
+      ),
+        child: Text("i am inside a container!",
+          style: TextStyle(fontSize: 20)),
+      ),
       ),
     );
   }
