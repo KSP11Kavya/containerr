@@ -48,27 +48,50 @@ void main() => runApp(MyApp());
 //     );
 //   }
 // }
+
+///.................................
+///decoration property
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text("designer container eaxmple"),
+//         ),
+//         body: Container(height: 200,
+//             width: double.infinity,
+//         //color:Colors.purple
+//     alignment: Alignment.center,
+//           margin: EdgeInsets.all(20),
+//       padding: EdgeInsets.all(30),
+//       decoration: BoxDecoration(
+//         border: Border.all(color: Colors.cyan.shade900,width: 3),
+//       ),
+//         child: Text("i am inside a container!",
+//           style: TextStyle(fontSize: 20)),
+//       ),
+//       ),
+//     );
+//   }
+// }
 class MyApp extends StatelessWidget {
+   
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("designer container eaxmple"),
-        ),
-        body: Container(height: 200,
-            width: double.infinity,
-        //color:Colors.purple
-    alignment: Alignment.center
-          margin: EdgeInsets.all(20),
+    return MaterialApp( home: Scaffold(appBar: AppBar(title: Text("Container transform"),),
+    body: Container(
+      height: 200,
+      width: double.infinity,
+      color: Colors.cyanAccent.shade700,
+      alignment: Alignment.center,
+      margin: EdgeInsets.all(20),
       padding: EdgeInsets.all(30),
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.cyan.shade900,width: 3),
-      ),
-        child: Text("i am inside a container!",
-          style: TextStyle(fontSize: 20)),
-      ),
-      ),
-    );
+      transform: Matrix4.rotationX(0.1),
+      child: Text("i am inside a container",
+        style: TextStyle(fontSize: 25,),),
+    ),
+    ),);
   }
 }
